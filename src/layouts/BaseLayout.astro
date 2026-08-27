@@ -1,5 +1,74 @@
 ---
 import "../styles/global.css";
-const { title = "Josefina Iriarte | Extranjería e Inmigración", description = "Asesoría jurídica en extranjería e inmigración.", canonical = "https://www.josefinairiarte.es" } = Astro.props;
+const {
+  title = "Josefina Iriarte | Extranjería e Inmigración",
+  description = "Asesoría jurídica en extranjería e inmigración.",
+  canonical = "https://www.josefinairiarte.es"
+} = Astro.props;
 ---
-<!doctype html><html lang="es"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content={description}/><link rel="canonical" href={canonical}/><title>{title}</title></head><body><header class="site-header"><div class="container nav"><a class="brand" href="/">Josefina Iriarte</a><nav class="nav-links"><a href="/extranjeria/">Extranjería</a><a href="/arraigo/">Arraigo</a><a href="/nacionalidad/">Nacionalidad</a><a href="/familia/">Familia</a><a href="/estudios/">Estudios</a><a class="btn" href="/contacto/">Consultar mi caso</a></nav></div></header><main><slot/></main><footer class="site-footer"><div class="container"><div class="footer-grid"><div><h3>Josefina Iriarte</h3><p>Asesoría jurídica en Extranjería e Inmigración.</p><p>Estudiamos cada caso de forma individual.</p></div><div><h3>Servicios</h3><p><a href="/arraigo/">Arraigo y regularización</a></p><p><a href="/nacionalidad/">Nacionalidad española</a></p><p><a href="/residencia-trabajo/">Residencia y trabajo</a></p></div><div><h3>Contacto</h3><p><a href="/contacto/">Solicitar consulta</a></p><p>WhatsApp · pendiente</p><p>Datos profesionales · pendiente</p></div></div><div class="footer-bottom"><span>© {new Date().getFullYear()} Josefina Iriarte</span><span>Información general · No sustituye una asesoría jurídica personalizada.</span></div></div></footer></body></html>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f5f2eb" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="/" aria-label="Josefina Iriarte - Inicio">
+          <span style="font-family: Georgia, serif; font-size: 18px;">Josefina Iriarte</span>
+        </a>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="/extranjeria/">Extranjería</a>
+          <a href="/arraigo/">Arraigo</a>
+          <a href="/nacionalidad/">Nacionalidad</a>
+          <a href="/familia/">Familia</a>
+          <a href="/estudios/">Estudios</a>
+          <a href="/contacto/" class="nav-cta btn">Consultar mi caso</a>
+        </nav>
+        <a href="/contacto/" class="menu" aria-label="Abrir contacto">☰</a>
+      </div>
+    </header>
+
+    <main><slot /></main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>Josefina Iriarte</h3>
+            <p>Asesoría jurídica en Extranjería e Inmigración.</p>
+            <p>Estudiamos cada caso de forma individual y te orientamos sobre el siguiente paso.</p>
+          </div>
+          <div>
+            <h3>Servicios</h3>
+            <p><a href="/extranjeria/">Extranjería e inmigración</a></p>
+            <p><a href="/arraigo/">Arraigo y regularización</a></p>
+            <p><a href="/nacionalidad/">Nacionalidad española</a></p>
+            <p><a href="/residencia-trabajo/">Residencia y trabajo</a></p>
+            <p><a href="/asilo/">Asilo y protección internacional</a></p>
+          </div>
+          <div>
+            <h3>Contacto</h3>
+            <p><a href="/contacto/">Solicitar consulta</a></p>
+            <p>WhatsApp · pendiente de confirmar</p>
+            <p>Datos profesionales · pendiente de confirmar</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© {new Date().getFullYear()} Josefina Iriarte</span>
+          <span>Información general · No sustituye una asesoría jurídica personalizada.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
