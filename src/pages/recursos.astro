@@ -1,0 +1,10 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const bullets=["Recurso de reposición.","Recurso de alzada cuando proceda.","Recurso contencioso-administrativo.","Subsanaciones.","Revisión de expedientes denegados.","Alegaciones frente a expedientes de expulsión.","Medidas cautelares cuando proceda."];
+const faqs=[
+{question:"¿Qué hago si me deniegan un expediente?",answer:"Conviene revisar la resolución cuanto antes, identificar el motivo y comprobar los plazos disponibles."},
+{question:"¿Qué hago si recibo una carta de expulsión?",answer:"Los plazos pueden ser breves. Lo recomendable es buscar asesoramiento jurídico inmediatamente."},
+{question:"¿Es mejor recurrir o presentar de nuevo?",answer:"Depende de la causa de la denegación y del expediente. Hay que valorar ambas opciones."}
+];
+---
+<ServicePage title="Recursos y situaciones urgentes" intro="Revisamos denegaciones, requerimientos, expedientes sancionadores, expulsiones y otras situaciones en las que los plazos pueden ser especialmente importantes." bullets={bullets} faqs={faqs} />
