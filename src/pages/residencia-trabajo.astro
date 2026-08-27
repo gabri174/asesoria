@@ -1,0 +1,10 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const bullets=["Residencia y trabajo por cuenta ajena.","Contratación desde país de origen.","Revisión de contrato y condiciones.","Residencia y trabajo por cuenta propia.","Plan de empresa y viabilidad.","Renovaciones y modificaciones.","Preparación de documentación empresarial.","Seguimiento del expediente."];
+const faqs=[
+{question:"¿Puedo pedir residencia y trabajo estando irregular?",answer:"No siempre. Existen vías específicas como determinados arraigos o modificaciones, pero hay que estudiar la situación concreta."},
+{question:"¿Qué debe cumplir un contrato?",answer:"Debe cumplir las condiciones laborales, salariales, de jornada y duración que correspondan."},
+{question:"¿Puedo trabajar como autónomo siendo extranjero?",answer:"Puede ser posible si se obtiene o modifica la autorización correspondiente y se cumplen sus requisitos."}
+];
+---
+<ServicePage title="Residencia y trabajo" intro="Asesoría para quienes necesitan tramitar o modificar una autorización para residir y trabajar en España, por cuenta ajena o propia." bullets={bullets} faqs={faqs} />
