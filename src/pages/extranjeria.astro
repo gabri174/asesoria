@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+const services = [
+["01","Arraigo y regularización","Vías de arraigo y otras opciones para personas extranjeras que se encuentran en España.","/arraigo/"],
+["02","Residencia y trabajo","Cuenta ajena, cuenta propia, renovaciones y modificaciones.","/residencia-trabajo/"],
+["03","Nacionalidad española","Nacionalidad por residencia, opción y otros supuestos.","/nacionalidad/"],
+["04","Familia y reagrupación","Reagrupación y residencia de familiares.","/familia/"],
+["05","Asilo y protección internacional","Solicitud, documentación, recursos y alternativas.","/asilo/"],
+["06","Estudios en España","Visados, estancia, prórrogas y modificaciones.","/estudios/"],
+["07","Recursos y urgencias","Denegaciones, expulsiones, requerimientos y situaciones urgentes.","/recursos/"],
+["08","Otros trámites","NIE, TIE, larga duración, residencia no lucrativa y otros procedimientos.","/contacto/"]
+];
+---
+<BaseLayout title="Extranjería e Inmigración | Josefina Iriarte" description="Asesoría jurídica en extranjería e inmigración en España.">
+<section class="page-hero"><div class="container"><span class="eyebrow">Servicios</span><h1>Extranjería e inmigración, explicado de forma clara.</h1><p class="lead">Organizamos los principales trámites para que puedas identificar qué área se acerca más a tu situación.</p></div></section>
+<section class="section"><div class="container"><div class="cards">{services.map(([number,title,text,href]) => <ServiceCard number={number} title={title} text={text} href={href} />)}</div></div></section>
+<section class="cta"><div class="container cta-grid"><div><h2>¿No encuentras exactamente tu caso?</h2><p>Cuéntanoslo. No todos los expedientes encajan en una categoría.</p></div><a class="btn light" href="/contacto/">Consultar mi caso</a></div></section>
+</BaseLayout>
