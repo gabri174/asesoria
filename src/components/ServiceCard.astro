@@ -1,0 +1,4 @@
+---
+const { number, title, text, href } = Astro.props;
+---
+<a class="card" href={href}><span class="card-number">{number}</span><div><h3>{title}</h3><p>{text}</p></div><span class="card-link">Ver servicio →</span></a>
