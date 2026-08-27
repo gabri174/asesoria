@@ -1,0 +1,10 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const bullets=["Arraigo social.","Arraigo sociolaboral.","Arraigo socioformativo.","Arraigo familiar.","Arraigo de segunda oportunidad.","Revisión de permanencia y documentación.","Preparación y presentación del expediente.","Seguimiento, requerimientos y recursos cuando proceda."];
+const faqs=[
+{question:"¿El empadronamiento es suficiente para regularizarme?",answer:"No. Puede servir para acreditar permanencia, pero hay que cumplir los requisitos de una vía concreta."},
+{question:"¿Puedo pedir arraigo si tengo antecedentes?",answer:"Los antecedentes pueden afectar al expediente. Antes de presentar conviene estudiar el caso y la situación de esos antecedentes."},
+{question:"¿Qué tipo de arraigo me corresponde?",answer:"Depende de la permanencia, vínculos, situación laboral, formación y circunstancias familiares. Por eso es importante estudiar cada caso."}
+];
+---
+<ServicePage title="Arraigo y regularización en España" intro="Estudiamos las diferentes vías de arraigo y otras opciones de regularización para personas extranjeras que se encuentran en España." bullets={bullets} faqs={faqs} />
