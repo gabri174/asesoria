@@ -1,0 +1,10 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const bullets=["Visado de estudios.","Estancia por estudios.","Estudios universitarios y formación profesional.","Másteres y doctorados.","Prácticas y actividades académicas.","Prórrogas.","Modificación a residencia y trabajo.","Familiares acompañantes cuando proceda."];
+const faqs=[
+{question:"¿Puedo estudiar en España más de 90 días?",answer:"Sí, cuando se cumplen los requisitos de una autorización o visado de larga duración por estudios."},
+{question:"¿Puedo trabajar mientras estudio?",answer:"Puede ser posible si se cumplen las condiciones legales y el trabajo es compatible con los estudios."},
+{question:"¿Puedo pasar de estudiante a residencia y trabajo?",answer:"Puede existir una vía de modificación si se cumplen los requisitos correspondientes."}
+];
+---
+<ServicePage title="Estudios en España" intro="Orientación para estudiantes que quieren venir a España o que ya están aquí y necesitan tramitar o modificar su situación." bullets={bullets} faqs={faqs} />
