@@ -1,0 +1,10 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const bullets=["Nacionalidad por residencia.","Supuestos con plazos reducidos.","Nacionalidad por opción.","Simple presunción en determinados casos.","Recursos frente a denegaciones.","Recursos por demora cuando proceda.","Jura y trámites posteriores."];
+const faqs=[
+{question:"¿Cuánto tiempo necesito para solicitarla?",answer:"La regla general es de diez años de residencia legal, aunque existen plazos reducidos para determinados colectivos y supuestos."},
+{question:"¿La tarjeta roja cuenta como residencia legal para nacionalidad?",answer:"La tarjeta roja acredita una situación de protección internacional y no equivale necesariamente a residencia computable. Hay que revisar el caso."},
+{question:"¿Qué ocurre si tengo antecedentes?",answer:"Pueden afectar a la valoración de buena conducta cívica y conviene estudiar el expediente antes de presentar."}
+];
+---
+<ServicePage title="Nacionalidad española" intro="Te orientamos sobre nacionalidad por residencia, opción, simple presunción y otros supuestos, además de recursos y trámites posteriores." bullets={bullets} faqs={faqs} />
