@@ -1,0 +1,10 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+const bullets=["Preparación de la solicitud.","Revisión del relato y documentación.","Preparación para entrevista.","Renovación de documentación.","Recursos frente a denegación.","Estudio de alternativas cuando proceda.","Revisión de hoja blanca y tarjeta roja."];
+const faqs=[
+{question:"¿Qué diferencia hay entre hoja blanca y tarjeta roja?",answer:"Son documentos que identifican distintas fases de la solicitud de protección internacional. Ninguno equivale por sí solo a una concesión de asilo."},
+{question:"¿La tarjeta roja es residencia?",answer:"No necesariamente. Acredita la condición de solicitante de protección internacional."},
+{question:"¿Puedo viajar con asilo en trámite?",answer:"Es una cuestión delicada y puede afectar al expediente. Conviene consultar antes de salir de España."}
+];
+---
+<ServicePage title="Asilo y protección internacional" intro="Asesoría para solicitudes de protección internacional, documentación, recursos frente a denegaciones y estudio de alternativas." bullets={bullets} faqs={faqs} />
