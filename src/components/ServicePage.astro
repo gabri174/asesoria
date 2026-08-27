@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const { title, intro, eyebrow = "Servicio jurídico", bullets = [], faqs = [] } = Astro.props;
+---
+<BaseLayout title={`${title} | Josefina Iriarte`} description={intro}>
+  <section class="page-hero"><div class="container"><span class="eyebrow">{eyebrow}</span><h1>{title}</h1><p class="lead">{intro}</p></div></section>
+  <section class="section"><div class="container service-grid"><article class="service-copy"><h2>¿En qué podemos ayudarte?</h2><p>Estudiamos tu situación personal y documental para identificar la vía que mejor encaja con tu caso. A partir de ahí, te acompañamos en la preparación y tramitación del expediente.</p><ul>{bullets.map((item) => <li>{item}</li>)}</ul></article><aside class="aside"><strong>¿No tienes claro qué trámite necesitas?</strong><p>Es normal. Cuéntanos brevemente tu situación y revisamos contigo qué opciones pueden existir.</p><a class="btn" href="/contacto/">Quiero consultar mi caso</a></aside></div></section>
+  {faqs.length > 0 && <section class="section paper"><div class="container"><div class="section-head"><div><span class="eyebrow">Preguntas frecuentes</span><h2>Lo que más nos preguntan</h2></div></div><div class="faq">{faqs.map((faq) => <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div></div></section>}
+  <section class="cta"><div class="container cta-grid"><div><h2>¿Quieres que estudiemos tu caso?</h2><p>Cuéntanos qué situación tienes y te orientaremos sobre el siguiente paso.</p></div><a class="btn light" href="/contacto/">Solicitar consulta</a></div></section>
+</BaseLayout>
